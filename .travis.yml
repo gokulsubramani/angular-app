@@ -23,7 +23,7 @@ before_script:
     - npm install
 
 script:
-    - docker run angular-app -- --watch=false --code-coverage 
+    - docker run -t gokulsubramani/angular-app -- --watch=false --code-coverage 
 deploy:
     provider: elasticbeanstalk
     region: ap-south-1
