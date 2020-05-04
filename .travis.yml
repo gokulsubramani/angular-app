@@ -16,12 +16,8 @@ before_install:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
 before_script:
-- npm install
+    - npm install
 
-script: 
- - npm install chromedriver@81.0.0 --chromedriver-force-download
-    displayName: 
-        'Install Chrome'
-- npm run test -- --watch=false --code-coverage
-- npm run ci
+script:
+    - npm run test -- --watch=false --code-coverage 
 
