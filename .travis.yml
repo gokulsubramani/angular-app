@@ -27,7 +27,7 @@ script:
     - docker images
     - docker tag angular-app $DOCKER_USERNAME/angular-app
     - docker push $DOCKER_USERNAME/angular-app
-    - docker run -t gokulsubramani/angular-app -- --watch=false --code-coverage 
+    - docker run -t gokulsubramani/angular-app 
 deploy:
     provider: elasticbeanstalk
     region: ap-south-1
