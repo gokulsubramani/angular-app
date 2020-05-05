@@ -32,7 +32,7 @@ deploy:
     provider: elasticbeanstalk
     region: ap-south-1
     app: "angularapp"
-    env: "AngularApp-env"
+    env: "Angularapp-env"
     bucket_name: "elasticbeanstalk-ap-south-1-914520140918"
     bucket_path: "angularapp"
     on:
