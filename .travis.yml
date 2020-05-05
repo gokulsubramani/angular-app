@@ -31,10 +31,10 @@ after_success:
 deploy:
     provider: elasticbeanstalk
     region: ap-south-1
-    app: "angular-app"
+    app: "angularapp"
     env: "AngularApp-env"
     bucket_name: "elasticbeanstalk-ap-south-1-914520140918"
-    bucket_path: "angular-app"
+    bucket_path: "angularapp"
     on:
         branch: "master"
     access_key_id: $AWS_ACCESS_KEY
