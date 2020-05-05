@@ -27,7 +27,7 @@ after_success:
     - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
     - docker tag angular-app $DOCKER_USERNAME/angular-app:latest
     - docker push $DOCKER_USERNAME/angular-app:latest
-    #- docker run -t $DOCKER_USERNAME/angular-app 
+    - docker run -t $DOCKER_USERNAME/angular-app 
 deploy:
     provider: elasticbeanstalk
     region: ap-south-1
