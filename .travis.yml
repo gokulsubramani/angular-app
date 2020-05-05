@@ -22,7 +22,7 @@ before_script:
     - npm install
 script:
     - npm test
-    - docker build -t $DOCKER_USERNAME/angular-app .
+    - docker build -t angular-app .
 after_success:
     - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
     - docker tag angular-app $DOCKER_USERNAME/angular-app:latest
