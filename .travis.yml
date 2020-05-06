@@ -23,7 +23,6 @@ before_script:
     - npm install
 script:
     - npm test
-    - docker build --pull --cache-from gokulsubramani/angular-app --tag gokulsubramani/angular-app .
     #- docker run gokulsubramani/angular-app
     
 after_success:
