@@ -24,7 +24,7 @@ before_script:
 script:
     - npm test
     - docker build --pull --cache-from gokulsubramani/angular-app --tag gokulsubramani/angular-app .
-    - docker run gokulsubramani/angular-app
+    #- docker run gokulsubramani/angular-app
     
 after_success:
     - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
@@ -34,10 +34,10 @@ after_success:
 deploy:
     provider: elasticbeanstalk
     region: ap-south-1
-    app: "angularapp"
-    env: "Angularapp-env"
+    app: "angular-app"
+    env: "AngularApp-env"
     bucket_name: "elasticbeanstalk-ap-south-1-914520140918"
-    bucket_path: "angularapp"
+    bucket_path: "angular-app"
     on:
         branch: "master"
     access_key_id: $AWS_ACCESS_KEY
